@@ -57,8 +57,6 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate {
             fab.addItem(item: item)
         }
         
-//        fab.addItem(item: items[0])
-//        fab.addItem(item: items[1])
         self.view.addSubview(fab)
         self.view.backgroundColor = UIColor(red:0.39, green:0.38, blue:0.38, alpha:1.0)
     }
