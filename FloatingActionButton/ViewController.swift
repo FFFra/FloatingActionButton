@@ -12,13 +12,22 @@ import KCFloatingActionButton
 
 
 class ViewController: UIViewController, KCFloatingActionButtonDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
 
     override func viewDidAppear(_ animated: Bool) {
         layoutFAB()
     }
     
+    //Setup buttons
     func layoutFAB() {
-        
         
         let fab = KCFloatingActionButton()
         fab.fabDelegate = self
@@ -43,7 +52,6 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate {
         items[1].size = 54
         items[1].titleColor = UIColor.white
         
-        
         // Item 3
         items.append(KCFloatingActionButtonItem ())
         items[2].buttonColor = UIColor(red:0.12, green:0.12, blue:0.12, alpha:0.7)
@@ -52,26 +60,16 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate {
         items[2].size = 54
         items[2].titleColor = UIColor.white
         
-        for item in items{
+        for item in items {
             
             fab.addItem(item: item)
+            
         }
         
         self.view.addSubview(fab)
         self.view.backgroundColor = UIColor(red:0.39, green:0.38, blue:0.38, alpha:1.0)
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
